@@ -48,7 +48,14 @@ public class Utente
 		this.peso = peso;
 	}
 	
+	public float calcularIMC()
+	{
+		imc = peso/(altura*altura);
+		return imc;
+	}
+	
 	public String toString() {
 		return "Utente: \nNome: " + nome + "\nGÈnero: " + genero + "\nIdade: " + idade + " anos\nAltura: " + altura + "m\nPeso: "
 				+ peso+ "kg\nIMC: "+ imc;
 	}
+}
