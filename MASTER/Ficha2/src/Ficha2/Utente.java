@@ -54,6 +54,33 @@ public class Utente
 		return imc;
 	}
 	
+	public void estadoSaude(int p, float a)
+	{
+		double pesoideal = 0;
+		double linf = 0;
+		double lsup = 0; 
+		float i = p/(a*a);
+		if (i<=19)
+		{
+			System.out.println("Est· abaixo do peso!");
+			pesoideal = 22 * a * a;
+			System.out.println("O peso ideal para a sua altura È: "+pesoideal+" kgs.");
+		}
+		else if(i >25 )
+		{
+			System.out.println("Est· acima do peso!");
+			pesoideal = 22 * a * a;
+			System.out.println("O peso ideal para a sua altura È: "+pesoideal+" kgs.");
+		}
+		else
+		{
+			System.out.println("Est· no seu peso normal");
+			linf = 19 * a * a;
+			lsup = 25 * a * a;
+			System.out.println("O peso deve estar entre "+linf+" kgs e os "+lsup+" kgs.");
+		}
+	}
+	
 	public String toString() {
 		return "Utente: \nNome: " + nome + "\nGÈnero: " + genero + "\nIdade: " + idade + " anos\nAltura: " + altura + "m\nPeso: "
 				+ peso+ "kg\nIMC: "+ imc;
